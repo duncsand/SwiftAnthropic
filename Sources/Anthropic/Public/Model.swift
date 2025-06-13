@@ -21,7 +21,7 @@ import Foundation
 /// - claude-instant-1.2    Claude Instant
 /// - claude-2.1                Claude
 /// - claude-2.0                Claude
-/// 
+///
 /// Anthropic offer two families of models:
 ///
 /// *Claude Instant:* low-latency, high throughput.
@@ -47,9 +47,9 @@ import Foundation
 /// [More](https://docs.anthropic.com/claude/reference/selecting-a-model)
 /// [Models](https://docs.anthropic.com/en/docs/about-claude/models)
 public enum Model {
-   
+
    case claudeInstant12
-   case claude2 
+   case claude2
    case claude21
    case claude3Opus
    case claude3Sonnet
@@ -57,7 +57,9 @@ public enum Model {
    case claude3Haiku
    case claude35Haiku
    case claude37Sonnet
-   
+   case claude4Sonnet
+   case claude4Opus
+
    case other(String)
 
    public var value: String {
@@ -71,6 +73,8 @@ public enum Model {
       case .claude3Haiku: return "claude-3-haiku-20240307"
       case .claude35Haiku: return "claude-3-5-haiku-latest"
       case .claude37Sonnet: return "claude-3-7-sonnet-latest"
+      case .claude4Opus: return "claude-opus-4-20250514"
+      case .claude4Sonnet: return "claude-sonnet-4-20250514"
       case .other(let model): return model
       }
    }
